@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.hiczy.rest.security.dao.UserMapper">
+
+    <select id="getAuthoritiesById" resultType="java.lang.String" >
+        select p.permission_code
+        from sys_user u
+            left join sys_role_permission srp on u.role_id = srp.role_id
+            left join sys_permission p on p.id = srp.permission_id;
+    </select>
+
+
+
+</mapper>

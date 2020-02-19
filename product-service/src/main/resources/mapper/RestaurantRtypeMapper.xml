@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.hiczy.product.dao.RestaurantRtypeMapper">
+
+    <insert id="insert">
+        insert into restaurant_rtype (restaurant_id,rtype_id)
+            values (#{restaurantId},#{rtypeId});
+    </insert>
+
+    <delete id="delete">
+        delete from restaurant_rtype
+            where restaurant_id = #{restaurantId}
+                and  rtypeId = #{rtypeId}
+    </delete>
+</mapper>

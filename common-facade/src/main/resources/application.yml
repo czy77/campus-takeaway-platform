@@ -1,0 +1,7 @@
+spring:
+  datasource:
+    username: root
+    password: MDzz321..
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://47.107.131.79:3306/baoleme?useSSL=false

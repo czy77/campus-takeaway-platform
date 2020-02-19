@@ -1,0 +1,30 @@
+
+
+#dubbo相关配置
+dubbo:
+  application:
+    name: product-service-provider
+  scan:
+    base-packages: cn.hiczy.product.service
+  registry:
+    address: zookeeper://127.0.0.1:2181
+  protocol:
+    name: dubbo
+    port: 22200
+
+logging:
+  level:
+    root: warn
+    cn.hiczy.product.dao: trace
+  pattern:
+    console: '%p%m%n'
+
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-field: deleted  #全局逻辑删除字段值
+      logic-delete-value: 1 # 逻辑已删除值
+      logic-not-delete-value: 0 # 逻辑未删除值
+
+server:
+  port: 7770

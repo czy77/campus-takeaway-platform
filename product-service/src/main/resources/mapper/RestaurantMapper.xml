@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.hiczy.product.dao.RestaurantMapper">
+
+    <select id="selectRestaurantsByRtypeId" resultType="cn.hiczy.entity.product.Restaurant">
+    select r1.*
+         from restaurant r1
+         left join restaurant_rtype r2 on r1.id = r2.restaurant_id
+         where r2.rtype_id = #{rtypeId} limit #{limit} offset #{offset};
+    </select>
+
+
+</mapper>

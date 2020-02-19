@@ -1,0 +1,14 @@
+#dubbo相关配置
+dubbo:
+  application:
+    name: order-service-provider
+  scan:
+    base-packages: cn.hiczy.order.service
+  registry:
+    address: zookeeper://127.0.0.1:2181
+  protocol:
+    name: dubbo
+    port: 22201
+
+server:
+  port: 7771

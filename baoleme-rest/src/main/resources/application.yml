@@ -1,0 +1,19 @@
+server:
+  port: 7771
+
+
+dubbo:
+  application:
+    name: rest-consumer
+  registry:
+    address: zookeeper://127.0.0.1:2181  #注册中心的地址
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id:
+            client-secret:
+
+
