@@ -38,7 +38,7 @@
         <swagger.version>2.9.2</swagger.version>
         <ali.sdk.version>4.0.3</ali.sdk.version>
         <jwt.version>0.9.1</jwt.version>
-        <fastjson.version>1.2.60</fastjson.version>
+        <fastjson.version>1.2.83</fastjson.version>
     </properties>
 
 
